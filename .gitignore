@@ -1,9 +1,8 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.idea
+.vscode
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -21,3 +20,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Env files
+/public/env-config.js
+env-config.js
+.env
+!.env.example

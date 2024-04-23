@@ -16,17 +16,19 @@ const SideBar = ({ category, courses, pickCategory }: SideBarProps) => {
   const categories = getCategories(courses)
   return (
     <div className={styles.Container}>
-      {categories.map((name) => (
-        <div
-          key={name}
-          className={clsx(styles.Item, { [styles.ActiveItem]: name === category })}
-          onClick={() => {
-            pickCategory(name)
-          }}
-        >
-          {name}
-        </div>
-      ))}
+      <div className={styles.Wrapper}>
+        {categories.map((name) => (
+          <div
+            key={name}
+            className={clsx(styles.Item, { [styles.ActiveItem]: name === category })}
+            onClick={() => {
+              pickCategory(name)
+            }}
+          >
+            {name}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
